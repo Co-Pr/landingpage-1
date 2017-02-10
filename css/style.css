@@ -36,6 +36,17 @@ a {
 nav{
   background-color: transparent;
 }
+
+h2,h4 {
+  color: white;
+}
+
+textarea{
+  margin: 0px;
+  width: 470px;
+  height: 367px;
+}
+}
 /* --------------------------------
 
 Modules - reusable parts of our design
@@ -166,7 +177,6 @@ Main components
 .cd-fixed-bg h1, .cd-fixed-bg h2 {
   position: absolute;
   left: 50%;
-  top: 50%;
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -179,7 +189,7 @@ Main components
   text-align: center;
   font-size: 30px;
   font-size: 1.875rem;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);*/
   color: white;
 }
 

@@ -22,32 +22,38 @@
 
 
 	<style media="screen">
-			 .bouton{
+
+				ul li{
+					margin: 0% 8% 0% 5%;
+				}
+
+				 .bouton{
+					 color: white;
+		 font-size: 30px;
+		 background-color: transparent;
+		 font-weight: bold;
+		 border: solid 1px white;
+		 padding: 15px 40px;
+		 transition: all 0.3s ease-in-out;
+		 -webkit-transition: all 0.3s ease-in-out;
+		 -moz-transition: all 0.3s ease-in-out;
+		 -ms-transition: all 0.3s ease-in-out;
+				}
+
+				.bouton:hover{
+					font-size: 32px;
+					border-top: 0px;
 					color: white;
-					font-size: 30px;
+					border-right: 0px;
+					border-left: 0px;
+					border-bottom: solid 1px white;
 					background-color: transparent;
-					border: solid 1px white;
-				  padding: 15px 40px;
+					padding: 16px 41px;
 					transition: all 0.3s ease-in-out;
 				  -webkit-transition: all 0.3s ease-in-out;
 				  -moz-transition: all 0.3s ease-in-out;
 				  -ms-transition: all 0.3s ease-in-out;
-			}
-
-			.bouton:hover{
-				font-size: 32px;
-				border-top: 0px;
-				color: white;
-				border-right: 0px;
-				border-left: 0px;
-				border-bottom: solid 1px white;
-				background-color: transparent;
-				padding: 16px 41px;
-				transition: all 0.3s ease-in-out;
-			  -webkit-transition: all 0.3s ease-in-out;
-			  -moz-transition: all 0.3s ease-in-out;
-			  -ms-transition: all 0.3s ease-in-out;
-			}
+				}
 
 
 	</style>
@@ -69,7 +75,6 @@
 										</div>
 
 
-
 							<!--  LE LOGO  -->
 							<center>
 									<img src="img/CoPr-Logo v1 0 - outlined Future.png" class="logo">
@@ -88,7 +93,6 @@
 							</div>
 
 
-
 						<!--  Flèche -->
 				</div>
 
@@ -98,7 +102,7 @@
 
 				<div class="jumbotron vertical-center container">
 
-						<h2>Our Vision: shaping the future with no limit</h2>
+						<h3>Our Vision: shaping the future with no limit</h3>
 
 						<br>
 
@@ -120,7 +124,7 @@
 						<br>
 
 						<div class="align-bottom pull-right"><h3>
-							<a class="js-scrollTo" href="#contact">Would you like to know more?</a>
+							<a class="js-scrollTo" href="#title">Would you like to know more?</a>
 						</h3></div>
 
 						</div>
@@ -133,32 +137,43 @@
 <!-- section CONTACT -->
 		<div class="cd-fixed-bg cd-bg-contact jumbotron" id="contact">
 
-			<center><h4>Do you like to know more?</h4></center>
-
 						<!-- Titre  -->
 						<form method="post" name="email" action="mail" id="form">
-							
+
 									<!-- Les champs de saisies -->
+
+									<div class="form-group">
+										<br>
+										 <input id="title" name="nom" type="text" value="Contact us" readonly style="border:0px;font-size:4em;">
+									</div>
+
 									<div class="form-group">
 										<br>
 										 <input id="nom" name="nom" type="text" placeholder="Last Name">
 									</div>
+
 									<div class="form-group">
 										<input id="prenom" name="prenom" type="text" placeholder="First Name">
 									</div>
+
 									<div class="form-group">
 										<input id="email" name="mail" type="text" placeholder="E-Mail">
 									</div>
+
 									<div class="form-group">
 										<input id="entse" name="entse" type="text" placeholder="Company">
 									</div>
+
 									<div class="form-group">
 										<textarea id="message" name="message" type="text" placeholder="Your Message"></textarea>
 									</div>
 									<!-- Le bouton d'Envoi -->
 									<div class="form-group">
-										<input id="submit" name="submit"  type="submit" value="SEND">
+											<center>
+												<input style="width: 200px;" id="submit" name="submit"  type="submit" value="SEND">
+											</center>
 									</div>
+
 						</form>
 
 						<!-- Retour en haut -->
