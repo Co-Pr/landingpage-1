@@ -46,7 +46,40 @@ textarea{
   width: 470px;
   height: 367px;
 }
+
+
+ul li{
+  margin: 0% 8% 0% 5%;
 }
+
+ .bouton{
+   color: white;
+font-size: 30px;
+background-color: transparent;
+font-weight: bold;
+border: solid 1px white;
+padding: 15px 40px;
+transition: all 0.3s ease-in-out;
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+}
+
+.bouton:hover{
+  font-size: 32px;
+  border-top: 0px;
+  color: white;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: solid 1px white;
+  background-color: transparent;
+  padding: 16px 41px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
 /* --------------------------------
 
 Modules - reusable parts of our design
