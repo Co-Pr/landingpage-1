@@ -21,7 +21,7 @@
 	<script src="js/script.js"></script>
 
 
-	<title>Welcome to The Consulting Platform</title>
+	<title>Co-P'r</title>
 </head>
 <body class="container-fluid">
 
