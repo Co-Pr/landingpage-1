@@ -1,4 +1,4 @@
-<!doctype html>
+
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -40,7 +40,7 @@
 
 							<!--  LE LOGO  -->
 							<center>
-									<img src="img/CoPr-Logo v1 0 - outlined Future.png" class="logo">
+									<img id="logo" src="img/CoPr-Logo v1 0 - outlined Future.png" class="logo">
 							</center>
 
 							<!--  BOUTON Our Vision / Contact -->
@@ -101,44 +101,45 @@
 		<div class="cd-fixed-bg cd-bg-contact jumbotron" id="contact">
 
 						<!-- Titre  -->
-						<form method="post" name="email" action="mail" id="form">
+						<form method="post" name="email" action="PHPMail/test.php" id="form" enctype="multipart/form-data" >
 
 									<!-- Les champs de saisies -->
-
-									<div class="form-group">
+									<div class="form-group row">
 										<br>
-										 <input id="title" name="nom" type="text" value="Contact us" readonly style="border:0px;font-size:4em;">
+										 <input id="title" name="title" type="text" value="Contact us" readonly style="border:0px;font-size:4em;">
 									</div>
 
-									<div class="form-group">
+									<div class="form-group row">
 										<br>
-										 <input id="nom" name="nom" type="text" placeholder="Last Name / First Name">
+										 <input id="nom" name="name" type="text" placeholder="Last Name / First Name">
 									</div>
 
-
-									<div class="form-group">
-										<input id="email" name="mail" type="text" placeholder="E-Mail">
+									<div class="form-group row">
+										<br>
+										<input id="email" name="mail" type="email" placeholder="E-Mail">
 									</div>
 
-									<div class="form-group">
+									<div class="form-group row">
+										<br>
 										<input id="entse" name="entse" type="text" placeholder="Company">
 									</div>
 
-									<div class="form-group">
-										<textarea id="message" name="message" type="text" placeholder="Your Message"></textarea>
+									<div class="form-group row">
+										<br>
+										<textarea id="message" name="Msg" type="text" placeholder="Your Message"></textarea>
 									</div>
+
 									<!-- Le bouton d'Envoi -->
-									<div class="form-group">
-											<center>
-												<input style="width: 200px;" id="submit" name="submit"  type="submit" value="SEND">
-											</center>
+									<div class="form-group middle">
+										<br>
+											<input style="width: 200px;" name="submit"  type="submit" value="SEND">
 									</div>
 
 						</form>
 
 						<!-- Retour en haut -->
 						<div class="align-bottom pull-right"><h3>
-							<a class="js-scrollTo" href="#navbar">Top</a>
+							<a class="js-scrollTo" href="#logo">Top</a>
 						</h3></div>
 
 					<footer>
