@@ -11,6 +11,6 @@ $(document).ready(function() {
             return false;
     });
 
-    //
+    //La vidéo en fond d'écran dans la section 'Our Vision'
 
  });
