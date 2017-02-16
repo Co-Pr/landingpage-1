@@ -20,14 +20,50 @@
 	<!-- Les scripts codés en JS(Effet Smooth ,..) -->
 	<script src="js/script.js"></script>
 
+	<style media="screen">
+	.myButton {
+		background-color:#389c90;
+		-moz-border-radius:28px;
+		-webkit-border-radius:28px;
+		border-radius:28px;
+		border:1px solid transparent;
+		display:inline-block;
+		color:#ffffff;
+		font-size:22px;
+		padding:16px 31px;
+
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		}
+		.myButton:hover {
+		font-size:24px;
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		}
+		.myButton:active {
+		position:relative;
+		top:1px;
+		}
+
+	</style>
 
 	<title>Co-P'r</title>
 </head>
 <body class="container-fluid">
 
 	<main class="cd-main-content">
+<!----------------------- Le LOADER(à voir plus tard) --------------------------
 
-<!-- PRESENTATION -->
+				<div class="loader">
+						<span></span>
+				</div>
+-->
+
+<!----------------------- PRESENTATION ------------------------ --->
 				<div class="cd-fixed-bg cd-bg-1" >
 
 							<!-- Le Multilingue En/Fr
@@ -46,9 +82,12 @@
 							<!--  BOUTON Our Vision / Contact -->
 							<div class="text-center">
 									<ul class="list-inline text-center">
-										<li><button id="singlebutton" class="bouton js-scrollTo" href="#vision">Our Vision</button></li>
-										<li></li>
-										<li><button id="singlebutton" class="bouton js-scrollTo" href="#contact">Contact</button>	</li>
+										<li>
+											<a href="#vision" class="myButton js-scrollTo" >Our Vision</a>
+										</li>
+										<li>
+											<a href="#contact" class="myButton js-scrollTo">Contact</a>
+										</li>
 									<!--<li><button id="singlebutton" name="singlebutton" class="btn btn-primary js-scrollTo" href="#vision">Notre Vision</button></li>
 										<li><button id="singlebutton" name="singlebutton" class="btn btn-primary js-scrollTo" href="#contact">Contact</button>	</li> -->
 									</ul>
@@ -59,27 +98,24 @@
 				</div>
 
 <!-- WHAT WE DO ? -->
-				<!--
-				<div class="jumbotron vertical-center container">
+<div class="cd-fixed-bg cd-bg-vision" id="vision" >
 
-						<h3>Our Vision: shaping the future with no limit</h3>
+				<div class="jumbotron container">
+							<h1>Our Vision: shaping the future with no limit</h1>
+							<br><br>
+							<br><br>
+							<br><br>
+							<br><br>
+								<p class="lead"><h3>
+									<img src="img/Electron Way - dash v1 0.png" class="pull-left illustration img-responsive">
 
-						<br>
-
-						<div class="container">
-								<img src="img/Electron Way - dash v1 0.png" class="pull-left illustration img-responsive">
-
-								<p class="lead">
 									In our fast changing world, the traditional
 									consulting ecosystem is disturbed by
-									Innovation and new Social desires.<br>
+									Innovation and new Social desires.<br><br><br>
 									In this context, we believe that value will
 									only come from a limitless ecosystem,
 									able to renew the promise of consulting.
-								</p>
-
-						</div>
-
+								</h3></p>
 						<br>
 						<br>
 
@@ -89,16 +125,19 @@
 
 						</div>
 
-				</div> -->
+				</div>
+</div>
 
-				<!-- VIDEO EN ARRIERE-PLAN -->
+
+
+				<!-- VIDEO EN ARRIERE-PLAN
 
 				<div class="cd-scrolling-bg" id="video-container">
 
 
-						  <div class="video-content" >
+						  <div class="video-content" id="vision" >
 
-								<!--  Le texte sur la GAUCHE -->
+
 								<div class="inner pull-left">
 									<h1>Our Vision: shaping the future with no limit</h1>
 									<br>
@@ -122,7 +161,7 @@
 						  </div>
 							<video style="margin: -7% 0%;"  class="col-md-pull-5" autoplay loop src="MP4/Browsing.mp4"></video>
 
-				</div>
+				</div> -->
 				<!-- Fin de la section VISION -->
 
 
@@ -159,7 +198,7 @@
 									</div>
 
 									<!-- Le bouton d'Envoi -->
-									<div class="form-group middle">
+									<div class="form-group row">
 										<br>
 											<input style="width: 200px;" name="submit"  type="submit" value="SEND">
 									</div>

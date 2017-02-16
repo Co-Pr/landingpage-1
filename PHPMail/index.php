@@ -2,10 +2,6 @@
 
  require_once "Mail.php";
 
-
-
-
-
   if (isset($_POST['submit'])) {
 
     header('Location: ../index.php');
