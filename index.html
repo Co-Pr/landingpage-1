@@ -168,10 +168,8 @@
 <!-- section CONTACT -->
 		<div class="cd-fixed-bg cd-bg-contact jumbotron" id="contact">
 
-						<!-- Titre  -->
-						<form method="post" name="email" action="PHPMail/test.php" id="form" enctype="multipart/form-data" >
-
-									<!-- Les champs de saisies -->
+						<!-- Titre
+						<form method="post" name="email" action="PHPMail" id="form" enctype="multipart/form-data" >
 									<div class="form-group row">
 										<br>
 										 <input id="title" name="title" type="text" value="Contact us" readonly style="border:0px;font-size:4em;">
@@ -197,11 +195,21 @@
 										<textarea id="message" name="Msg" type="text" placeholder="Your Message"></textarea>
 									</div>
 
-									<!-- Le bouton d'Envoi -->
+
 									<div class="form-group row">
 										<br>
 											<input style="width: 200px;" name="submit"  type="submit" value="SEND">
 									</div>
+
+						</form>-->
+
+						<form action="Pear/index.php" method="POST">
+
+								<p>Name</p> <input type="text" name="name">
+								<p>Email</p> <input type="text" name="email">
+								<p>Entreprise</p> <input type="text" name="company">
+								<p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+								<input type="submit" value="Send"><input type="reset" value="Clear">
 
 						</form>
 

@@ -1,10 +1,7 @@
 <?php
-
- require_once "Mail.php";
-
+  require_once "Mail.php";
   if (isset($_POST['submit'])) {
 
-    header('Location: ../index.php');
 
 
             /*  Paramètres récupérés depuis la page HTML */
@@ -35,7 +32,7 @@
             $username = "contact@co-pr.net";
             $password = "PasswordIntrouvable8";
 
-
+            
 
             $headers = array ('From' => $from,
                               'To' => $to,

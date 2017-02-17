@@ -42,9 +42,7 @@
  * @version     CVS: $Id$
  * @link        http://pear.php.net/package/Mail/
  */
-
 require_once 'PEAR.php';
-
 /**
  * PEAR's Mail:: interface. Defines the interface for implementing
  * mailers under the PEAR hierarchy, and provides supporting functions
@@ -60,7 +58,6 @@ class Mail
      * @var string
      */
     public $sep = "\r\n";
-
     /**
      * Provides an interface for generating Mail:: objects of various
      * types
@@ -82,7 +79,6 @@ class Mail
             return PEAR::raiseError('Unable to find class for driver ' . $driver);
         }
     }
-
     /**
      * Implements Mail::send() function using php's built-in mail()
      * command.
@@ -114,17 +110,14 @@ class Mail
         if (!is_array($headers)) {
             return PEAR::raiseError('$headers must be an array');
         }
-
         $result = $this->_sanitizeHeaders($headers);
         if (is_a($result, 'PEAR_Error')) {
             return $result;
         }
-
         // if we're passed an array of recipients, implode it.
         if (is_array($recipients)) {
             $recipients = implode(', ', $recipients);
         }
-
         // get the Subject out of the headers array so that we can
         // pass it as a seperate argument to mail().
         $subject = '';
@@ -132,13 +125,10 @@ class Mail
             $subject = $headers['Subject'];
             unset($headers['Subject']);
         }
-
         // flatten the headers out.
         list(, $text_headers) = Mail::prepareHeaders($headers);
-
         return mail($recipients, $subject, $body, $text_headers);
     }
-
     /**
      * Sanitize an array of mail headers by removing any additional header
      * strings present in a legitimate header's value.  The goal of this
@@ -154,7 +144,6 @@ class Mail
                              null, $value);
         }
     }
-
     /**
      * Take an array of mail headers and return a string containing
      * text usable in sending a message.
@@ -174,7 +163,6 @@ class Mail
     {
         $lines = array();
         $from = null;
-
         foreach ($headers as $key => $value) {
             if (strcasecmp($key, 'From') === 0) {
                 include_once 'Mail/RFC822.php';
@@ -183,14 +171,11 @@ class Mail
                 if (is_a($addresses, 'PEAR_Error')) {
                     return $addresses;
                 }
-
                 $from = $addresses[0]->mailbox . '@' . $addresses[0]->host;
-
                 // Reject envelope From: addresses with spaces.
                 if (strstr($from, ' ')) {
                     return false;
                 }
-
                 $lines[] = $key . ': ' . $value;
             } elseif (strcasecmp($key, 'Received') === 0) {
                 $received = array();
@@ -215,10 +200,8 @@ class Mail
                 $lines[] = $key . ': ' . $value;
             }
         }
-
         return array($from, join($this->sep, $lines));
     }
-
     /**
      * Take a set of recipients and parse them, returning an array of
      * bare addresses (forward paths) that can be passed to sendmail
@@ -234,32 +217,26 @@ class Mail
     protected function parseRecipients($recipients)
     {
         include_once 'Mail/RFC822.php';
-
         // if we're passed an array, assume addresses are valid and
         // implode them before parsing.
         if (is_array($recipients)) {
             $recipients = implode(', ', $recipients);
         }
-
         // Parse recipients, leaving out all personal info. This is
         // for smtp recipients, etc. All relevant personal information
         // should already be in the headers.
         $Mail_RFC822 = new Mail_RFC822();
         $addresses = $Mail_RFC822->parseAddressList($recipients, 'localhost', false);
-
         // If parseAddressList() returned a PEAR_Error object, just return it.
         if (is_a($addresses, 'PEAR_Error')) {
             return $addresses;
         }
-
         $recipients = array();
         if (is_array($addresses)) {
             foreach ($addresses as $ob) {
                 $recipients[] = $ob->mailbox . '@' . $ob->host;
             }
         }
-
         return $recipients;
     }
-
 }

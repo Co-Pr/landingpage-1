@@ -98,7 +98,7 @@ class PEAR
      * @access  private
      */
     var $_default_error_mode = null;
-
+!
     /**
      * Default error options used for this object when error mode
      * is PEAR_ERROR_TRIGGER.
